@@ -105,10 +105,11 @@ body {
 }
 
 .video-section video {
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 90%;
     object-fit: cover;
     z-index: -1;
+    border-radius: 3px;
 }
 
 .info-section {
@@ -124,26 +125,21 @@ body {
 
 .info-section .info-text {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .info-section .oferta {
-    background-color: #9c4848;
+    display: inline-block;
+    background-color: #711717;
     color: white;
     padding: 15px 25px;
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.info-section .oferta:hover {
-    background-color: white;
-    color: #9c4848;
-    transform: scale(1.1);
 }
 
 /* Sekcja "O nas" */
@@ -154,6 +150,7 @@ body {
 h1 {
     text-align: center;
     margin-top: 10px;
+    color: #711717;
 }
 
 .tresc {
@@ -175,12 +172,13 @@ h1 {
 /* Sekcja oferta */
 .naszaOferta {
     margin-top: 100px;
+    text-align: center;
 }
 
 .oferty {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
     margin: 0 auto;
     align-items: center;
     text-align: center;
@@ -188,21 +186,55 @@ h1 {
 }
 
 .srodek_oferty {
+    font-size: 20px;
+    /* border: solid 1px black; */
+}
+
+.pokaz{
+    width: 230px;
+    height: 300px;
+}
+
+.cena{
+    margin-top: 30px;
+}
+
+.srodek_linku_facebook{
+    margin-top: 40px;
+}
+
+.facebook_link{
+    text-decoration: none;
+    color: black;
     font-size: 18px;
-    border: solid 1px black;
+    transition: all 0.2s;
+}
+
+/* Opinie */
+.opinie {
+    margin-top: 100px;
 }
 
 /* Animacje i efekty */
 .oferta:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
     background-color: rgb(255, 255, 255);
-    border-color: black;
-    color: rgb(50, 50, 50);
+    color:#711717;
+    border: none;
 }
 
 .oferta:active {
-    transform: translateY(3px);
+    transform:  translateY(5px);
     background-color: rgb(200, 200, 200);
+}
+
+.pokaz:hover{
+    transform: scale(1.1);
+}
+
+.facebook_link:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
 }
 
 @keyframes oferta-pulsowanie {
@@ -212,9 +244,4 @@ h1 {
     50% {
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     }
-}
-
-/* Opinie */
-.opinie {
-    margin-top: 100px;
 }
